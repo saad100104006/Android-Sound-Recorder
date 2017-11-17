@@ -3,10 +3,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.1"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
-        applicationId "com.example.recordvoice"
+        applicationId "com.autocallrecorder.hidepapp"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
@@ -38,6 +38,6 @@ dependencies {
     compile('com.google.apis:google-api-services-drive:v3-rev52-1.22.0') {
         exclude group: 'org.apache.httpcomponents'
     }
-
+    compile 'nl.psdcompany:duo-navigation-drawer:2.0.6'
     //apply plugin: 'com.google.gms.google-services'
 }

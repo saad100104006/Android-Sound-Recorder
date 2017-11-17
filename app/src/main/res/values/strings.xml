@@ -3,9 +3,7 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
-
     <string name="menu_settings">Settings</string>
     <string name="menu_about">About</string>
     <string name="menu_Enable_record">Enable Record</string>
@@ -56,6 +54,11 @@
     <string name="record_impossible">Unfortunately, it is not possible to record calls in this device. (Usually because another application/service is using the microphone in the background)</string>
     <string name="confirm_speaker">You should open speaker, enter yes to open?</string>
     <string name="upload_success">Upload Success to CloudStorage</string>
+
+
+
+
+
     <string name="all_record">All Record</string>
     <string name="call_in">Call In</string>
     <string name="call_out">Call Out</string>
@@ -69,6 +72,23 @@
     <string name="app_id">ca-app-pub-2932805193551960~9284178532</string>
     <string name="ad_unit_banner">ca-app-pub-2932805193551960/1760911736</string>
     <string name="ad_unit_full">ca-app-pub-2932805193551960/8865376137</string>
+
+
+    <string name="hello_blank_fragment">This is the main fragment</string>
+
+    <array name="menuOptions">
+        <item>@string/all_record</item>
+        <item>@string/call_in</item>
+        <item>@string/call_out</item>
+        <item>@string/hide</item>
+        <item>@string/cloud_storage</item>
+        <item>@string/share</item>
+        <item>@string/rate</item>
+        <item>@string/communicate</item>
+
+    </array>
+
+
 
     //in app billing
     <string name="key_billing">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjNVUVCOTxmnDax5d1u6jSHsYIgp4K5+jMWFvSeLCz8F2i2TX3qi7EZWTKTVEfR7zpFba+U2qijTcm2G70oxBXWL/fH9Riwn9zbcI8sOxOeSEyIZgPvT1Qwi1DwVeg2LP4FG1kQNG8qbKxUfMkyeRJyKPMI7y1AVvEL+yR9XuhAMHvNttwk6de21mDnyUr5Y6f300jOx70BZfMZ4BzXGWqjikrEkw3cR2zcl6oE7A4MbO/NQGWTaSPlaMOmYnqmAj7eSX5+ktdfXwkcbW6126McEw8DvL3a6w9UYxj5YmMhAvCC6nNZltP8hpsgGjMMsjGRgGhYT0wkyGx+Ae+8CHgwIDAQAB</string>

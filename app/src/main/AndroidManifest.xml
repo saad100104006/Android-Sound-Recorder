@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.recordvoice">
+    package="com.autocallrecorder.hidepapp">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -17,6 +17,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
 
     <application
         android:allowBackup="true"
@@ -24,22 +26,28 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
-            android:name=".MainActivity"
+            android:name="com.autocallrecorder.hidepapp.SplashActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+    <activity
+            android:name="com.autocallrecorder.hidepapp.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <receiver android:name=".MyPhoneReceiver" >
+        <receiver android:name="com.autocallrecorder.hidepapp.MyPhoneReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.PHONE_STATE" />
                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
@@ -47,17 +55,30 @@
         </receiver>
 
         <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.autocallrecorder.hidepapp.VideoPlay">
+        </activity>
+
+
+        <activity
             android:theme="@style/DialogTheme"
-            android:name=".RecordPlayActivity">
+            android:name="com.autocallrecorder.hidepapp.RecordPlayActivity">
         </activity>
 
         <activity
             android:theme="@style/Theme.AppCompat.Dialog"
-            android:name=".DialogConfirmActivity"/>
+            android:name="com.autocallrecorder.hidepapp.DialogConfirmActivity"/>
 
-        <service android:name=".service.RecordService" />
+        <service android:name="com.autocallrecorder.hidepapp.service.CallRecordService" />
 
-        <activity android:name=".MaindemoActivity"/>
+        <activity android:name="com.autocallrecorder.hidepapp.MaindemoActivity"/>
+
+        <receiver android:name="com.autocallrecorder.hidepapp.OutgoingCallReceiver">
+            <intent-filter >
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
 
     </application>
 
